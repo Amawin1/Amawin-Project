@@ -4,33 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amawin Music</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0b0f;
-      --panel: #121218;
-      --text: #e6eaf2;
-      --accent: #f5c542;
-      --accent-2: #ff3b3b;
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.45);
-    }
-    * { box-sizing: border-box; }
-    body { margin:0; background: var(--bg); color: var(--text); font-family: Inter, system-ui; line-height: 1.5; }
-    header { display:flex; align-items:center; justify-content:space-between; padding: 20px 40px; background: var(--panel); border-bottom: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); }
-    .logo { font-weight: 800; font-size: 1.8rem; color: var(--accent); letter-spacing: 2px; cursor: default; }
-    nav ul { list-style:none; display:flex; gap: 24px; margin:0; padding:0; }
-    nav a { text-decoration:none; color: var(--text); font-weight: 600; transition: color .2s; }
-    nav a:hover { color: var(--accent); }
-    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-    section { margin-bottom: 60px; }
-    h1, h2 { margin: 0 0 16px; }
-    .btn { background: var(--accent); color: #0b0b0f; padding: 12px 20px; border-radius: 14px; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-block; transition: filter .2s; }
-    .btn:hover { filter: brightness(1.1); }
-    footer { text-align:center; padding:20px; color: var(--text); border-top:1px solid rgba(255,255,255,.08); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -47,155 +21,103 @@
     </nav>
   </header>
   <main>
-    <section id="connect" style="max-width:900px; margin:40px auto; text-align:center;">
-  <h2 style="color:#f5c542; font-size:2rem; margin-bottom:24px;">Connect With Me</h2>
-  <div class="social-buttons" style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
+    <section id="connect" class="social-section">
+      <h2>Connect With Me</h2>
+      <div class="social-buttons">
+        <!-- Social Buttons -->
+        <a href="https://www.bandsintown.com/a/15598728" target="_blank" class="social-btn bandsintown">Bandsintown</a>
+        <a href="https://www.instagram.com/itz_amawin/?hl=en" target="_blank" class="social-btn instagram">Instagram</a>
+        <a href="https://youtube.com/@AMAWIN_K9" target="_blank" class="social-btn youtube">YouTube</a>
+        <a href="https://open.spotify.com/artist/1sLhacB5MOAJOBptYh6mDj" target="_blank" class="social-btn spotify">Spotify</a>
+        <a href="https://soundcloud.com/amawin" target="_blank" class="social-btn soundcloud">SoundCloud</a>
+        <a href="https://www.tiktok.com/@amawin_k9" target="_blank" class="social-btn tiktok">TikTok</a>
+      </div>
+    </section>
 
-   <!-- Bandsintown -->
-   <a href="https://www.bandsintown.com/a/15598728" target="_blank" rel="noopener noreferrer"
-   style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-          background: #00CEC8; color:#ffffff; transition: transform .2s, filter .2s;">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bandsintown_logo.svg" alt="Bandsintown" style="width:20px; height:20px;">
-   Bandsintown
-</a>
+    <section id="music">
+      <h2>Music</h2>
+      <p>Listen to my latest tracks on Spotify:</p>
+      <div class="spotify-grid">
+        <!-- Spotify embeds -->
+        <iframe src="https://open.spotify.com/embed/track/51JI3SseGMKpBegx8ZaxSW" width="100%" height="152" frameborder="0"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/7wBgbxQ3uUTUItpkj4R38n" width="100%" height="152" frameborder="0"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/7aKwyLbfYVNzxqiOKjh2mw" width="100%" height="152" frameborder="0"></iframe>
+      </div>
+    </section>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/itz_amawin/?hl=en" target="_blank" rel="noopener noreferrer"
-       style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-              background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); color:#ffffff; transition: transform .2s, filter .2s;">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:20px; height:20px;">
-      Instagram
-    </a>
-
-    <!-- YouTube -->
-    <a href="https://youtube.com/@AMAWIN_K9" target="_blank" rel="noopener noreferrer"
-       style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-              background:#FF0000; color:#ffffff; transition: transform .2s, filter .2s;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width:20px; height:20px;">
-      YouTube
-    </a>
-
-    <!-- Spotify -->
-    <a href="https://open.spotify.com/artist/1sLhacB5MOAJOBptYh6mDj" target="_blank" rel="noopener noreferrer"
-       style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-              background:#1DB954; color:#0b0b0f; transition: transform .2s, filter .2s;">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify" style="width:20px; height:20px;">
-      Spotify
-
-    <!-- SoundCloud -->
-    <a href="https://soundcloud.com/amawin" target="_blank" rel="noopener noreferrer"
-   style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-          background:#FF5500; color:#ffffff; transition: transform .2s, filter .2s;">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Soundcloud_logo.svg" alt="SoundCloud" style="width:20px; height:20px;">
-   SoundCloud
-</a>
- 
-    <!-- TikTOk -->
-    <a href="https://www.tiktok.com/@amawin_k9" target="_blank" rel="noopener noreferrer"
-   style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-          background: #010101; color:#ffffff; transition: transform .2s, filter .2s;">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/TikTok_logo.svg" alt="TikTok" style="width:20px; height:20px;">
-   TikTok
-</a>
-
-
-    </a>
-
-  </div>
-  <style>
-    .social-buttons a:hover {
-      transform: translateY(-3px);
-      filter: brightness(1.1);
-    }
-    @media(max-width:600px) {
-      .social-buttons { flex-direction:column; gap:12px; }
-    }
-  </style>
-</section>
-
-<section id="music">
-  <h2>Music</h2>
-  <p>Listen to my latest tracks on Spotify:</p>
-
-  <div class="spotify-grid">
-    <!-- Track / Playlist 1 -->
-    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/51JI3SseGMKpBegx8ZaxSW?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-    <!-- Track / Playlist 2 -->
-    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7wBgbxQ3uUTUItpkj4R38n?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-    <!-- Playlist Example -->
-    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7aKwyLbfYVNzxqiOKjh2mw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-
-  <style>
-    .spotify-grid { display:flex; flex-wrap:wrap; gap:20px; }
-    .spotify-grid iframe { border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.45); }
-  </style>
-</section>
-
-
-<section id="videos">
-  <h2>Videos</h2>
-
-<br>
-From Amawin
-<br>
-<br>
- <iframe width="300" height="150" src="https://www.youtube.com/embed/VKgDnXRJciM?si=Lcek40eJKE6GOHlr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="300" height="150" src="https://www.youtube.com/embed/Enw6aXuavp0?si=ucVe_N1qVrX5ql-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<br>
-<br>
-Featurings
-<br>
-<br>
-
-<iframe width="300" height="150" src="https://www.youtube.com/embed/sLIZxDcF7uo?si=8uQ1zz0bPur_dIvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-  <style>
-    .video-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:flex-start; }
-    .video-card { background:#121218; border-radius:18px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.45); position:relative; cursor:pointer; transition: transform .3s, box-shadow .3s; width:300px; flex-shrink:0; }
-    .video-card:hover { transform: translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,.6); }
-    .video-wrapper { position:relative; width:100%; padding-top:56.25%; /* 16:9 aspect ratio */ overflow:hidden; }
-    .video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
-    .video-card h3 { margin:12px; font-size:1rem; color:#f5c542; }
-    .video-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,.4); display:flex; align-items:center; justify-content:center; opacity:0; transition: opacity .3s; pointer-events:none; }
-    .video-card:hover .video-overlay { opacity:1; }
-    .video-overlay::before { content:'►'; font-size:2.5rem; color:#f5c542; }
-  </style>
-</section>
-  </style>
-</section>
+    <section id="videos">
+      <h2>Videos</h2>
+      <div class="video-grid">
+        <!-- YouTube embeds -->
+        <iframe width="300" height="150" src="https://www.youtube.com/embed/VKgDnXRJciM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <iframe width="300" height="150" src="https://www.youtube.com/embed/Enw6aXuavp0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <iframe width="300" height="150" src="https://www.youtube.com/embed/sLIZxDcF7uo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>
-    I’m <strong style="color:#f5c542;">Amawin</strong>, a Sri Lankan Ceylon Producer and Rapper, representing my culture through music and storytelling. 
-    <strong style="color:#f5c542;">From Raigampura</strong> streets to the studio, I’ve built my craft step by step — producing beats, writing lyrics, and delivering raw, real bars that connect with my audience. 
-  </p>
-  <p>
-    Over the years, I’ve collaborated with talented artists, released tracks under my label <strong style="color:#f5c542;">KrownBase Entertainment</strong>, 
-    and created music videos that reflect the struggles, dreams, and energy of the streets. 
-    My goal is to inspire, entertain, and push the boundaries of what it means to be an <strong style="color:#f5c542;">independent artist</strong>.
-  </p>
-  <p>
-    Music isn’t just my passion; it’s my mission — a way to share stories, unite listeners, and leave a legacy that lasts.
-  </p>
-
+      <p>I’m <strong>Amawin</strong>, a Sri Lankan Ceylon Producer and Rapper...</p>
     </section>
+
     <section id="contact">
       <h2>Contact</h2>
-<br>
-      <a href="https://www.instagram.com/itz_amawin/?hl=en" target="_blank" rel="noopener noreferrer" 
-   style="display:inline-block; padding:12px 20px; border-radius:14px; font-weight:700; text-decoration:none;
-          background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); color:#ffffff; transition: transform .2s, filter .2s;">
-   Follow me on Instagram
-</a>
+      <a href="https://www.instagram.com/itz_amawin/?hl=en" target="_blank" class="contact-btn">Follow me on Instagram</a>
     </section>
   </main>
-  <footer>© <span id="year"></span> Amawin Music | Built with ❤ for the culture</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <footer>
+    © <span id="year"></span> Amawin Music | Built with ❤ for the culture
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Content -->
+  <header>
+    <div class="logo">My Website</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Welcome to My Website</h1>
+      <p>This is a responsive website template.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> My Website</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
