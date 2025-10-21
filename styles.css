@@ -335,6 +335,11 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 24px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
 }
 
 nav a {
