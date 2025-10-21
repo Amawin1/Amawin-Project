@@ -99,18 +99,6 @@
     © <span id="year"></span> Amawin Music | Built with ❤ for the culture
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const toggle = document.getElementById('nav-toggle');
-    const nav = document.getElementById('primary-nav');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-    });
-
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="menu.js"></script>
 </body>
 </html>
