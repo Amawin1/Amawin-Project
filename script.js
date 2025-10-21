@@ -1,4 +1,7 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+// Toggle navigation menu on small screens
+const toggleMenuButton = document.querySelector('.toggle-menu');
+const navList = document.querySelector('nav ul');
 
-// script.js
-document.getElementById('year').textContent = new Date().getFullYear();
+toggleMenuButton.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
