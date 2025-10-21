@@ -366,50 +366,41 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile Responsiveness */
+/* For mobile screens */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
-  nav ul {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
   }
 
-  nav a {
+  header nav ul li {
+    margin-right: 0;
     margin-bottom: 10px;
-    font-size: 1.2rem;
+  }
+
+  header nav ul li:last-child {
+    margin-bottom: 0;
   }
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
+/* For landscape mobile screens (wider screens) */
+@media (max-width: 1024px) and (orientation: landscape) {
   header {
-    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .logo {
-    font-size: 1.5rem;
+  header nav ul {
+    flex-direction: row;
   }
 
-  nav a {
-    font-size: 1rem;
-  }
-
-  footer p {
-    font-size: 0.9rem;
+  header nav ul li {
+    margin-right: 20px;
   }
 }
-
-/* Keyframe Animation for Fade-in */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
