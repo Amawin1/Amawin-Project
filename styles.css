@@ -404,3 +404,71 @@ footer {
     margin-right: 20px;
   }
 }
+
+
+
+more
+
+/* Default Styles */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.more {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .more {
+    display: block;
+  }
+
+  .more-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .more-options {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .more-options li {
+    margin-bottom: 10px;
+  }
+
+  .more-options a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Toggle the dropdown */
+  .more-button.active + .more-options {
+    display: block;
+  }
+}
