@@ -313,57 +313,35 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* General Header Styles */
+/* Basic header styling */
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: var(--panel);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius);
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
 }
 
 header .logo {
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: var(--accent);
-  letter-spacing: 2px;
+  font-size: 24px;
+  color: white;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
   text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-/* Main Content Area */
-main {
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 0 20px;
-}
-
-section {
-  margin-bottom: 60px;
-}
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: var(--text);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 16px;
 }
 
 /* For mobile screens */
@@ -373,7 +351,13 @@ footer {
     align-items: flex-start;
   }
 
+  header .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
   header nav ul {
+    display: flex;
     flex-direction: column;
     width: 100%;
     padding-left: 0;
@@ -387,23 +371,19 @@ footer {
   header nav ul li:last-child {
     margin-bottom: 0;
   }
-}
 
-/* For landscape mobile screens (wider screens) */
-@media (max-width: 1024px) and (orientation: Portrait) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  header nav ul {
-    flex-direction: row;
-  }
-
-  header nav ul li {
-    margin-right: 9px;
+  header nav ul li a {
+    font-size: 18px;
   }
 }
 
+/* For smaller mobile screens (portrait mode) */
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 18px;
+  }
 
-
+  header nav ul li a {
+    font-size: 16px;
+  }
+}
