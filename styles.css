@@ -26,14 +26,13 @@ body {
 /* Header */
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 20px 40px;
   background: var(--panel);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   animation: slideIn 0.7s ease-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  align-items: stretch;
 }
 
 .logo {
@@ -132,8 +131,9 @@ footer {
 
 .spotify-grid {
   display: flex;
-  flex-wrap: nowrap;
   gap: 20px;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
 
 .spotify-grid iframe {
@@ -316,13 +316,11 @@ body {
 /* General Header Styles */
 header {
   display: flex;
-  align-items: center;
-  padding: 20px 40px;
+  padding: 30px 30px;
   background: var(--panel);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
-  justify-content: space-between;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 header .logo {
@@ -337,8 +335,7 @@ nav ul {
   display: flex;
   gap: 24px;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
+  align-content: stretch;
 }
 
 nav a {
