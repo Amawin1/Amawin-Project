@@ -335,6 +335,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 24px;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 nav a {
@@ -422,7 +424,7 @@ more
 
 .nav-list a {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-weight: bold;
 }
 
