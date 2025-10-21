@@ -335,6 +335,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 24px;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 nav a {
@@ -390,7 +392,7 @@ footer {
 }
 
 /* For landscape mobile screens (wider screens) */
-@media (max-width: 1024px) and (orientation: Portrait) {
+@media (max-width: 1024px) and (orientation: Landscape) {
   header {
     flex-direction: row;
     justify-content: space-between;
