@@ -1,9 +1,10 @@
-// Mobile menu toggle
 const toggle = document.getElementById('nav-toggle');
 const nav = document.getElementById('primary-nav');
+const header = document.querySelector('.site-header');
 
+// Mobile menu toggle
 toggle.addEventListener('click', () => {
-  nav.classList.toggle('open'); // slide-in menu
+  nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
 });
 
@@ -15,6 +16,40 @@ nav.querySelectorAll('a').forEach(link => {
       toggle.setAttribute('aria-expanded', false);
     }
   });
+});
+
+// Header/logo scroll behavior
+window.addEventListener('scroll', () => {
+  if (window.innerWidth < 900) {
+    // Mobile: header scrolls normally
+    header.style.position = 'relative';
+  } else {
+    // Desktop: sticky
+    header.style.position = 'sticky';
+    header.style.top = '16px';
+  }
+});
+
+// Scroll to anchor with offset on page load
+window.addEventListener('load', () => {
+  const hash = window.location.hash; // Get the anchor from URL e.g., #home, #music, etc.
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      const headerOffset = 70; // Set this to your header height
+      const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      // Ensuring we don't have any scroll behavior when loading the page
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'instant' // no smooth scroll here
+      });
+    }
+  } else {
+    // If no anchor, stay at the top
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
 });
 
 // Set current year
