@@ -1,13 +1,8 @@
-// Force the page to scroll to the top on load
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-});
-
-// Mobile menu toggle
 const toggle = document.getElementById('nav-toggle');
 const nav = document.getElementById('primary-nav');
+const header = document.querySelector('.site-header');
 
-// Mobile menu toggle functionality
+// Mobile menu toggle
 toggle.addEventListener('click', () => {
   nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
@@ -22,3 +17,18 @@ nav.querySelectorAll('a').forEach(link => {
     }
   });
 });
+
+// Header/logo scroll behavior
+window.addEventListener('scroll', () => {
+  if (window.innerWidth < 900) {
+    // Mobile: header scrolls normally
+    header.style.position = 'relative';
+  } else {
+    // Desktop: sticky
+    header.style.position = 'sticky';
+    header.style.top = '16px';
+  }
+});
+
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
