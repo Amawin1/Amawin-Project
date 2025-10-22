@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amawin Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" aria-hidden="true">AMAWIN</div>
+
+      <!-- mobile hamburger button -->
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <svg class="hamburger" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <path class="line line1" d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path class="line line2" d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path class="line line3" d="M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#Featurings">Featurings</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="apply" href="index.html">Apply to KrownBase</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="connect" class="social-section">
+      <h2>Connect With Me</h2>
+      <div class="social-buttons">
+        <a href="https://www.bandsintown.com/a/15598728" target="_blank" rel="noopener" class="social-btn bandsintown">Bandsintown</a>
+        <a href="https://www.instagram.com/itz_amawin/?hl=en" target="_blank" rel="noopener" class="social-btn instagram">Instagram</a>
+        <a href="https://youtube.com/@AMAWIN_K9" target="_blank" rel="noopener" class="social-btn youtube">YouTube</a>
+        <a href="https://open.spotify.com/artist/1sLhacB5MOAJOBptYh6mDj" target="_blank" rel="noopener" class="social-btn spotify">Spotify</a>
+        <a href="https://soundcloud.com/amawin" target="_blank" rel="noopener" class="social-btn soundcloud">SoundCloud</a>
+        <a href="https://www.tiktok.com/@amawin_k9" target="_blank" rel="noopener" class="social-btn tiktok">TikTok</a>
+      </div>
+    </section>
+
+    <section id="music">
+      <h2>Music</h2>
+      <p>Listen to my latest tracks on Spotify:</p>
+      <div class="spotify-grid">
+        <iframe src="https://open.spotify.com/embed/track/51JI3SseGMKpBegx8ZaxSW" width="100%" height="152" frameborder="0" allow="encrypted-media" title="Spotify track 1"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/7wBgbxQ3uUTUItpkj4R38n" width="100%" height="152" frameborder="0" allow="encrypted-media" title="Spotify track 2"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/7aKwyLbfYVNzxqiOKjh2mw" width="100%" height="152" frameborder="0" allow="encrypted-media" title="Spotify track 3"></iframe>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>Videos</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VKgDnXRJciM" title="YouTube video 1" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/Enw6aXuavp0" title="YouTube video 2" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Featurings">
+      <h2>Featurings</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/sLIZxDcF7uo" title="YouTube video 3" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I’m <strong>Amawin</strong>, a Sri Lankan Ceylon Producer and Rapper...</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <a href="https://www.instagram.com/itz_amawin/?hl=en" target="_blank" rel="noopener" class="contact-btn">Follow me on Instagram</a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Amawin Music | Built with ❤ for the culture
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
