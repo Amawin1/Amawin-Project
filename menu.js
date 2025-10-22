@@ -30,32 +30,24 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Scroll to top or anchor on page load
+// Scroll to anchor with offset on page load
 window.addEventListener('load', () => {
-  // Mobile check
-  const isMobile = window.innerWidth < 900;
+  const hash = window.location.hash; // Get the anchor from URL e.g., #home, #music, etc.
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      const headerOffset = 70; // Set this to your header height
+      const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
 
-  if (isMobile) {
-    const hash = window.location.hash; // URL anchor e.g., #music
-    if (hash) {
-      const target = document.querySelector(hash);
-      if (target) {
-        const headerOffset = 70; // header height + margin (adjust if needed)
-        const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth' // smooth scrolling
-        });
-      }
-    } else {
-      // No anchor, scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   } else {
-    // Desktop: scroll to top for safety
-    window.scrollTo(0, 0);
+    // If no anchor, scroll to the top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
 
