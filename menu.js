@@ -18,13 +18,11 @@ nav.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Header/logo scroll behavior
+// Header sticky behavior
 window.addEventListener('scroll', () => {
   if (window.innerWidth < 900) {
-    // Mobile: header scrolls normally
     header.style.position = 'relative';
   } else {
-    // Desktop: sticky
     header.style.position = 'sticky';
     header.style.top = '16px';
   }
@@ -32,3 +30,8 @@ window.addEventListener('scroll', () => {
 
 // Set current year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Scroll to top on page load
+window.onload = function() {
+  window.scrollTo(0, 0);
+};
