@@ -1,9 +1,10 @@
-// Mobile menu toggle
 const toggle = document.getElementById('nav-toggle');
 const nav = document.getElementById('primary-nav');
+const header = document.querySelector('.site-header');
 
+// Mobile menu toggle
 toggle.addEventListener('click', () => {
-  nav.classList.toggle('open'); // slide-in menu
+  nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
 });
 
@@ -15,6 +16,18 @@ nav.querySelectorAll('a').forEach(link => {
       toggle.setAttribute('aria-expanded', false);
     }
   });
+});
+
+// Header/logo scroll behavior
+window.addEventListener('scroll', () => {
+  if (window.innerWidth < 900) {
+    // Mobile: header scrolls normally
+    header.style.position = 'relative';
+  } else {
+    // Desktop: sticky
+    header.style.position = 'sticky';
+    header.style.top = '16px';
+  }
 });
 
 // Set current year
