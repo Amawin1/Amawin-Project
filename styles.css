@@ -14,8 +14,12 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 h2 { margin-bottom:12px; }
 
 header.site-header {
-  position: sticky; top:16px; z-index:50; padding:12px 20px;
+  position: sticky;
+  top:16px;
+  z-index:50;
+  padding:12px 20px;
 }
+
 .header-inner {
   display:flex; justify-content:space-between; align-items:center; gap:20px;
   max-width:1100px; margin:0 auto; background:var(--panel);
@@ -67,27 +71,11 @@ footer { text-align:center; padding:20px; color:var(--text); border-top:1px soli
 /* Mobile nav menu */
 @media(max-width:899px) {
   .nav-toggle { display:inline-flex; }
-  .primary-nav {
-    display:block; 
-    position:fixed; 
-    top:0; 
-    right:0; 
-    height:100vh; 
-    width:var(--nav-width); 
-    transform:translateX(100%); 
-    background:var(--panel); 
-    padding:80px 20px 20px; 
-    transition:transform 0.32s; 
-    z-index:60; 
-  }
+  .primary-nav { display:block; position:fixed; top:0; right:0; height:100vh; width:var(--nav-width); transform:translateX(100%); background:var(--panel); padding:80px 20px 20px; transition:transform 0.32s; z-index:60; }
   .primary-nav.open { transform:translateX(0); }
   .primary-nav ul { flex-direction:column; gap:14px; list-style:none; }
 }
-
-@media(min-width:900px) { 
-  .primary-nav { display:flex; } 
-  .nav-toggle { display:none; } 
-}
+@media(min-width:900px) { .primary-nav { display:flex; } .nav-toggle { display:none; } }
 
 /* Scroll anchor fix */
 section { scroll-margin-top:100px; }
